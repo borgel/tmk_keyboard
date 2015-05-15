@@ -39,7 +39,7 @@
 #----------------------------------------------------------------------------
 
 # Target file name (without extension).
-TARGET = gh60_lufa
+TARGET = trainboard_lufa
 
 # Directory common source filess exist
 TMK_DIR = ../../tmk_core
@@ -55,7 +55,8 @@ SRC =	keymap_common.c \
 ifdef KEYMAP
     SRC := keymap_$(KEYMAP).c $(SRC)
 else
-    SRC := keymap_poker.c $(SRC)
+#    SRC := keymap_poker.c $(SRC)
+    SRC := keymap_brownfox-mod.c $(SRC)
 endif
 
 CONFIG_H = config.h
