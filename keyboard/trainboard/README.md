@@ -1,7 +1,7 @@
 Trainboard keyboard firmware
 ============================
 
-* This README not yet updated to match reality. *
+_**This README not yet updated to match reality**_
 
 ## GH60 Resources
 - [KOMAR's project page](http://blog.komar.be/projects/gh60-programmable-keyboard/)
@@ -16,18 +16,19 @@ Move to this directory then just run `make` like:
 
     $ make
 
-Use `make -f Makefile.pjrc` if you want to use PJRC stack but I find no reason to do so now.
+Use `make -f Makefile.pjrc` if you want to use PJRC stack but this hasn't been tested as LUFA works for me.
 
 
 ## Keymap
-Several version of keymap are available in advance but you are recommended to define your favorite layout yourself. To define your own keymap create file named `keymap_<name>.c` and see keymap document(you can find in top README.md) and existent keymap files.
+Only one keymap is supported at the moment, the modified brownfox. Credit 
+where credit is due, this layout is based on Muirium's layout from matt3o's
+superb custom keyboard build thread on Deskauthority [1].
 
-To build firmware binary hex file with a certain keymap just do `make` with `KEYMAP` option like:
+[](http://deskthority.net/post113862.html#p113862)
 
-    $ make KEYMAP=[poker|poker_set|poker_bit|plain|hasu|spacefn|hhkb|<name>]
+### 0. Modified Brownfox
 
-
-### 5. HHKB
+_This section incomplete_
 [keymap_hhkb.c](keymap_hhkb.c) emulates original HHKB layers.
 #### 5.0: Default layer
     ,-----------------------------------------------------------.
