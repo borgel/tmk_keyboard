@@ -1,0 +1,27 @@
+TRANSFER TO SIMPLENOTE
+
+Rows
+B0 row orange 0
+B1 row yellow 1
+B2 row red 2
+B3 row green 3
+B4 row brown 4
+
+Colls (remember cols are horizontally mirrored as marked on keyboard)
+fixed    mirrored (orig)
+14       0 grey left B7
+13       1 purp left D0
+12       2 blue left D1
+11       3 green D2
+10       4 yellow D3
+9        5 orange C6
+8        6 red left C7
+7        7 brown left D5
+6        8 red B5
+5        9 brown B6
+4        10 black F7
+3        11 white F6
+2        12 grey F5
+1        13 purple F4
+0        14 blue F1
+
