@@ -39,7 +39,7 @@
 #----------------------------------------------------------------------------
 
 # Target file name (without extension).
-TARGET = gh60_lufa
+TARGET = mediakeys
 
 # Directory common source filess exist
 TMK_DIR = ../../tmk_core
@@ -55,7 +55,7 @@ SRC =	keymap_common.c \
 ifdef KEYMAP
     SRC := keymap_$(KEYMAP).c $(SRC)
 else
-    SRC := keymap_poker.c $(SRC)
+    SRC := keymap_media.c $(SRC)
 endif
 
 CONFIG_H = config.h
@@ -120,7 +120,7 @@ EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
 CONSOLE_ENABLE = yes	# Console for debug(+400)
 COMMAND_ENABLE = yes    # Commands for debug and configuration
 #SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
-NKRO_ENABLE = yes	# USB Nkey Rollover - not yet supported in LUFA
+#NKRO_ENABLE = yes	# USB Nkey Rollover - not yet supported in LUFA
 
 
 # Optimize size but this may cause error "relocation truncated to fit"
