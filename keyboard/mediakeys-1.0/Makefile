@@ -47,6 +47,9 @@ TMK_DIR = ../../tmk_core
 # Directory keyboard dependent files exist
 TARGET_DIR = .
 
+# How to program the trinket with avrdude
+PROGRAM_CMD = avrdude -p $(MCU) -c usbtiny -U flash:w:$(TARGET).hex
+
 # project specific files
 SRC =	keymap_common.c \
 	matrix.c \
@@ -63,7 +66,8 @@ CONFIG_H = config.h
 
 # MCU name
 #MCU = at90usb1287
-MCU = atmega32u4
+#MCU = atmega32u4
+MCU = atmega328p
 
 # Processor frequency.
 #     This will define a symbol, F_CPU, in all source code files equal to the
