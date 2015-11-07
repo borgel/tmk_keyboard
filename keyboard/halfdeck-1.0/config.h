@@ -34,6 +34,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
+// modify bootmagic keys
+#define BOOTMAGIC_KEY_SALT              KC_ESC        //we can't hold space on the halfdeck
+#define BOOTMAGIC_KEY_SKIP              KC_SPACE
+
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE    5
 
@@ -44,9 +48,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* key combination for command */
 #define IS_COMMAND() ( \
-    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
+    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_LCTRL)) \
 )
-
 
 
 /*
