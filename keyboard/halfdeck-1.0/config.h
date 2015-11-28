@@ -38,7 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_KEY_SALT              KC_ESC        //we can't hold space on the halfdeck
 #define BOOTMAGIC_KEY_SKIP              KC_SPACE
 
-// used to trigger bootloader (to reprogram)
+// used to trigger bootloader (to reprogram). Hold Esc + V while plugging in to trigger it
 #define BOOTMAGIC_KEY_BOOTLOADER        KC_V
 
 /* Set 0 if debouncing isn't needed */

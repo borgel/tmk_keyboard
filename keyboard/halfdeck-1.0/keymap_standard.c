@@ -5,18 +5,18 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP(ESC, 1,   2,   3,   4,   5,   EQL ,ESC, \
            TAB, Q,   W,   E,   R,   T,   LBRC,     \
            ENT ,A,   S,   D,   F,   G,   BSLS,     \
-           LSFT,Z,   X,   C,   V,   COMM,          \
+           LSFT,Z,   X,   C,   V,   DOT,           \
            LCTL,FN1, LALT,LGUI,FN0),
 
     // 1: layer down (space held)
     KEYMAP(GRV, 0,   9,   8,   7,   6,   MINS,TRNS,\
            BSPC,P,   O,   I,   U,   Y,   RBRC,     \
            QUOT,SCLN,L,   K,   J,   H,   TRNS,     \
-           TRNS,SLSH,M,   N,   B,   DOT,           \
+           TRNS,SLSH,M,   N,   B,   COMM,          \
            TRNS,TRNS,TRNS,TRNS,TRNS),
 
     // 2: layer up (FN held)
-    //TODO fill in media controls
+    //TODO fill in media controls on 1,2,3
     KEYMAP(TRNS,1   ,   2,   3,TRNS,TRNS,   TRNS,TRNS, \
            DEL ,VOLU,PGUP,  UP,HOME,TRNS,   TRNS,     \
            TRNS,VOLD,LEFT,DOWN,RGHT,TRNS,   TRNS,     \
