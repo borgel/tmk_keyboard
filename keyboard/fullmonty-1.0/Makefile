@@ -39,7 +39,7 @@
 #----------------------------------------------------------------------------
 
 # Target file name (without extension).
-TARGET = phantom_pjrc
+TARGET = fullmonty_pjrc
 
 # Directory common source filess exist
 TMK_DIR = ../../tmk_core
