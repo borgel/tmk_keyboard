@@ -48,9 +48,10 @@ TMK_DIR = ../../tmk_core
 TARGET_DIR = .
 
 # keyboard dependent files
-SRC =	keymap.c \
-	matrix.c \
-	led.c
+SRC =	keymap_ansi.c \
+      keymap.c \
+      matrix.c \
+      led.c
 
 CONFIG_H = config.h
 

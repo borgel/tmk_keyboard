@@ -27,9 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         Fullmonty-V1.0
 #define DESCRIPTION     A bright orange scratch built ANSI 104 keyboard
 
-/* message strings */
-#define DESCRIPTION     t.m.k. keyboard firmware for Fullmonty
-
 /* matrix size */
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 18
