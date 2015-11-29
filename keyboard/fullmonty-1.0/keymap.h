@@ -35,24 +35,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 extern const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS];
 extern const uint16_t fn_actions[];
 
-// Convert physical keyboard layout to matrix array.
-// This is a macro to define keymap easily in keyboard layout form.
-#define KEYMAP( \
-    K5A, K5B, K5C, K5D, K5E, K5F, K5G, K5H, K5I, K5J, K5K, K5L, K5M, K5N, K5O, K5P, K5Q, K5R, \
-    K4A, K4B, K4C, K4D, K4E, K4F, K4G, K4H, K4I, K4J, K4K, K4L, K4M, K4N, K4O, K4P, K4Q, K4R, \
-    K3A, K3B, K3C, K3D, K3E, K3F, K3G, K3H, K3I, K3J, K3K, K3L, K3M, K3N,      K3P, K3Q, K3R, \
-    K2A, K2B, K2C, K2D, K2E, K2F, K2G, K2H, K2I, K2J, K2K, K2L, K2M, K2N,      K2P, K2Q, K2R, \
-    K1A, K1B, K1C, K1D, K1E, K1F, K1G, K1H, K1I, K1J, K1K, K1L, K1M, K1N,      K1P, K1Q, K1R, \
-    K0A, K0B, K0C, K0D,      K0F, K0G, K0H,           K0K, K0L, K0M, K0N,      K0P, K0Q, K0R  \
-) { \
-/*             0         1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16   */  \
-/* 5 */   { KC_##K5A, KC_##K4A, KC_##K5C, KC_##K5D, KC_##K5E, KC_##K5F, KC_##K5H, KC_##K5I, KC_##K5J, KC_##K5K, KC_##K5L, KC_##K5M, KC_##K5N, KC_##K5O, KC_##K5P, KC_##K5Q, KC_##K5R}, \
-/* 4 */   { KC_##K4B, KC_##K4C, KC_##K4D, KC_##K4E, KC_##K4F, KC_##K4G, KC_##K4H, KC_##K4I, KC_##K4J, KC_##K4K, KC_##K4L, KC_##K4M, KC_##K4N, KC_##K4O, KC_##K4P, KC_##K4Q, KC_##K4R}, \
-/* 3 */   { KC_##K3A, KC_##K3B, KC_##K3C, KC_##K3D, KC_##K3E, KC_##K3F, KC_##K3G, KC_##K3H, KC_##K3I, KC_##K3J, KC_##K3K, KC_##K3L, KC_##K3M, KC_##K3N, KC_##K3P, KC_##K3Q, KC_##K3R}, \
-/* 2 */   { KC_##K2A, KC_##K2B, KC_##K2C, KC_##K2D, KC_##K2E, KC_##K2F, KC_##K2G, KC_##K2H, KC_##K2I, KC_##K2J, KC_##K2K, KC_##K2L, KC_##K2M, KC_##K2N, KC_##K2P, KC_##K2Q, KC_##K2R}, \
-/* 1 */   { KC_##K1A, KC_##K1B, KC_##K1C, KC_##K1D, KC_##K1E, KC_##K1F, KC_##K1G, KC_##K1H, KC_##K1I, KC_##K1J, KC_##K1K, KC_##K1L, KC_##K1M, KC_##K1N, KC_##K1P, KC_##K1Q, KC_##K1R}, \
-/* 0 */   { KC_##K0A, KC_##K0B, KC_##K0C, KC_##K5B, KC_##K0D, KC_##K0F, KC_##K5G, KC_##K0G, KC_##K0H, KC_NO,    KC_##K0K, KC_##K0L, KC_##K0M, KC_##K0N, KC_##K0P, KC_##K0Q, KC_##K0R} \
-}
 
+    /* 0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17 */
+#define KEYMAP( \
+      K00,      K02, K03, K04, K05,      K07, K08, K09, K0A, K0B, K0C, K0D, K0E, K0F, K0G, K0H, \
+      K10, K11, K12, K13, K14, K15, K16, K17, K18, K19, K1A, K1B, K1C,      K1E, K1F, K1G, K1H, \
+      K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A, K2B, K2C,      K2E, K2F, K2G, K2H, \
+      K30, K31, K32, K33, K34, K35, K36, K37, K38, K39, K3A, K3B,           K3E,                \
+      K40, K41, K42, K43, K44, K45, K46, K47, K48, K49, K4A,                K4E,      K4G,      \
+      K50, K51, K52,           K55,                K59, K5A,      K5C,      K5E, K5F, K5G, K5H  \
+) { \
+   { KC_##K00, KC_NO,    KC_##K02, KC_##K03, KC_##K04, KC_##K05, KC_NO,    KC_##K07, KC_##K08, KC_##K09, KC_##K0A, KC_##K0B, KC_##K0C, KC_##K0D, KC_##K0E, KC_##K0F, KC_##K0G, KC_##K0H}, \
+   { KC_##K10, KC_##K11, KC_##K12, KC_##K13, KC_##K14, KC_##K15, KC_##K16, KC_##K17, KC_##K18, KC_##K19, KC_##K1A, KC_##K1B, KC_##K1C, KC_NO,    KC_##K1E, KC_##K1F, KC_##K1G, KC_##K1H}, \
+   { KC_##K20, KC_##K21, KC_##K22, KC_##K21, KC_##K24, KC_##K25, KC_##K26, KC_##K27, KC_##K28, KC_##K29, KC_##K2A, KC_##K2B, KC_##K2C, KC_NO,    KC_##K2E, KC_##K2F, KC_##K2G, KC_##K2H}, \
+   { KC_##K30, KC_##K31, KC_##K32, KC_##K33, KC_##K34, KC_##K35, KC_##K36, KC_##K37, KC_##K38, KC_##K39, KC_##K3A, KC_##K3B, KC_NO,    KC_NO,    KC_##K3E, KC_NO,    KC_NO,    KC_NO   }, \
+   { KC_##K40, KC_##K41, KC_##K42, KC_##K43, KC_##K44, KC_##K45, KC_##K46, KC_##K47, KC_##K48, KC_##K49, KC_##K4A, KC_NO,    KC_NO,    KC_NO,    KC_##K4E, KC_NO,    KC_##K4G, KC_NO   }, \
+   { KC_##K50, KC_##K51, KC_##K52, KC_NO,    KC_NO,    KC_##K55, KC_NO,    KC_NO,    KC_NO,    KC_##K59, KC_##K5A, KC_NO,    KC_##K5C, KC_NO,    KC_##K5E, KC_##K5F, KC_##K5G, KC_##K5H}  \
+}
+   /* 0        1             2         3         4         5       6          7         8        9        10         11        12        13        14       15         16        17 */
 
 #endif
